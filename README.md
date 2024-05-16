@@ -77,3 +77,13 @@
 3. add a new `replaceCart` function inside of the `cartSlice` function in `cart-slice.js`
 4. dispatch the `cartData` with help of the `replaceCart()` from the `cartActions` inside the `fetchCartData` action creator in `cart-actions.js`
 5. call `fetchCartData` inside a new `useEffect` function in `App.js`
+
+## 8. Finalizing the Fetching Logic
+
+1. fix the issue where we automatically resend the cart when the application loads
+   1. add a new `changed` property in the `cartSlice` function in `cart-slice.js`
+   2. dispatch `sendCartData` conditionally in `App.js`
+   3. in `cart-actions.js`, send a new object without the `changed` property instead of the overall `cart` to Firebase
+2. fix the bug where when you clear the cart entirely then reload and add an item to cart again or show the cart again
+   1. when the cart is cleared entirely, there is no `items` key anymore in Firebase
+   2. in `cart-actions.js`, where we replace the cart with `cartData`, transform the `cartData` so that the payload is an object that always has an `items` key
