@@ -54,3 +54,12 @@
 1. get hold of the overall cart with help of `useSelector()` in `App.js`
 2. use `useEffect()` to watch for changes in the cart state
 3. inside of it, send a HTTP request to Firebase
+
+## 5. Handling Http States & Feedback with Redux
+
+1. add the new `Notification.js` file inside the `UI` folder
+2. use this file to show the notification & handle errors in the `useEffect()` function in `App.js`
+3. manage the notification with help of Redux by adding a `notification` property to the `initialState` & a `showNotification` method
+4. dispatch the notification when starting sending the data, the data is sent successfully & if there is an error in `App.js`
+5. use this new `notification` UI state from `ui-slice.js` with help of `useSelector()` to render the `<Notification>` component conditionally in `App.js`
+6. in `App.js`, make sure that you don't send the cart when the app runs for the first time with help of an `isInitial` variable
