@@ -48,3 +48,9 @@
 
 1. create a new project in Firebase named `react-redux-cart`
 2. keep the link to where you will send your HTTP requests
+
+## 4. Using useEffect with Redux
+
+1. get hold of the overall cart with help of `useSelector()` in `App.js`
+2. use `useEffect()` to watch for changes in the cart state
+3. inside of it, send a HTTP request to Firebase
