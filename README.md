@@ -69,3 +69,11 @@
 1. move the code for sending cart data out of the `App.js` component into an action creator
 2. create a new `sendCartData` action creator in `cart-slice.js`
 3. dispatch the `sendCartData` action inside the `useEffect()` function in `App.js`
+
+## 7. Getting Started with Fetching Data
+
+1. move the `sendCartData` action creator out of `cart-slice.js` into a new `cart-actions.js` file
+2. build another `fetchCartData` action creator that fetches the cart when the application loads in `cart-actions.js`
+3. add a new `replaceCart` function inside of the `cartSlice` function in `cart-slice.js`
+4. dispatch the `cartData` with help of the `replaceCart()` from the `cartActions` inside the `fetchCartData` action creator in `cart-actions.js`
+5. call `fetchCartData` inside a new `useEffect` function in `App.js`
