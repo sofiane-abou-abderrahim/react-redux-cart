@@ -30,3 +30,16 @@
 6. updating the cart items content when we click the `Add to Cart`, the `+` & `-` and the cart badge buttons
    1. create the `cartSlice` with help of `createSlice` in `cart-slice.js`
    2. set up the `cartSlice` logic
+
+## 2. Refresher / Practice: Part 2/2
+
+1. set up the logic for the `removeItemFromCart` function in `cart-slice.js`
+2. export the `cartSlice` as default
+3. export the `cartActions`
+4. in `store/index.js`, merge this `cartSlice` into the overall Redux store
+5. wire up the cart actions
+   1. add a `DUMMY_PRODUCTS` array in `Products.js` & set the properties based on the properties in `cart-slice.js`
+   2. in `ProductItem.js`, wire the `Add to Cart` button to the `addItemToCart` function in `cart-slice.js`
+   3. update the cart badge in `CartButton.js` by reading the cart slice `totalQuantity` with help of `useSelector()`
+   4. render the cart correctly in `Cart.js` by reading the cart slice `items` with help of `useSelector()`
+   5. make the `+` & `-` buttons work in `CartItem.js` with help of `useDispatch()` & `cartActions`
