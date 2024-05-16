@@ -63,3 +63,9 @@
 4. dispatch the notification when starting sending the data, the data is sent successfully & if there is an error in `App.js`
 5. use this new `notification` UI state from `ui-slice.js` with help of `useSelector()` to render the `<Notification>` component conditionally in `App.js`
 6. in `App.js`, make sure that you don't send the cart when the app runs for the first time with help of an `isInitial` variable
+
+## 6. Using an Action Creator Thunk
+
+1. move the code for sending cart data out of the `App.js` component into an action creator
+2. create a new `sendCartData` action creator in `cart-slice.js`
+3. dispatch the `sendCartData` action inside the `useEffect()` function in `App.js`
