@@ -43,3 +43,8 @@
    3. update the cart badge in `CartButton.js` by reading the cart slice `totalQuantity` with help of `useSelector()`
    4. render the cart correctly in `Cart.js` by reading the cart slice `items` with help of `useSelector()`
    5. make the `+` & `-` buttons work in `CartItem.js` with help of `useDispatch()` & `cartActions`
+
+## 3. Redux & Async Code
+
+1. create a new project in Firebase named `react-redux-cart`
+2. keep the link to where you will send your HTTP requests
